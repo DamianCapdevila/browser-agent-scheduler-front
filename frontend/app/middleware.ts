@@ -19,11 +19,7 @@ export async function middleware(req: NextRequest) {
   if (session && req.nextUrl.pathname === '/auth') {
     return NextResponse.redirect(new URL('/', req.url))
   }
-
-  if (session && req.nextUrl.pathname === '/change-password') {
-    return NextResponse.redirect(new URL('/', req.url))
-  }
-  
+    
   return res
 }
 
